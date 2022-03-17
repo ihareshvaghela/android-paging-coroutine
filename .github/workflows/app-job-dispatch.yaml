@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Master-Branch'     
+        description: 'Branch'     
         required: true
         default: 'master'
   
@@ -32,8 +32,8 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
          name: Package
-         path: app/build/outputs/
-         #path: app/build/outputs/apk/debug/
+         path: app/build/outputs/apk/debug/
+         #path: app/build/outputs/
          #path: [MODULE]/build/outputs/
          retention-days: 2
 
